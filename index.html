@@ -11,15 +11,23 @@
     </div>
     <script>
       var dodger = document.getElementById('dodger');
-      dodger.style.backgroundColor = "#FF69B4";
-      dodger.style.bottom = "0px";
 
-      document.addEventListener("keydown", function(e) {
+      function moveDodgerLeft() {
+        document.addEventListener("keydown", function(e) {
         if (e.which === 37) {
           var leftString = dodger.style.left.replace('px', '');
           var leftInt = parseInt(leftString);
-          if (leftInt !== 0) {dodger.style.left = `${leftInt-10}px`;}
-          else {dodger.style.left = `${leftInt}px`}
+          if (leftInt > 0) {
+            dodger.style.left = `${leftInt-10}px`;
+          }
+          else {
+            dodger.style.left = `${leftInt}px`;
+          }
+        }
+      }
+
+      
+          
         }
       });
     </script>
