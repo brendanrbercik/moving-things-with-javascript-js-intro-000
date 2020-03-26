@@ -15,8 +15,9 @@
       dodger.style.bottom = "0px";
       document.addEventListener("keydown", function(e) {
         if (key.which == 37) {
-          
-          dodger.style.left = "${left-1}px"
+          var leftInt = dodger.style.left.replace('px', '');
+          var left = parseInt(leftInt);
+          dodger.style.left = "${left-1}px";
         }
       });
     </script>
