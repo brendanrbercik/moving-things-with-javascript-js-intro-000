@@ -21,8 +21,17 @@
           if (leftInt > 0) {
             dodger.style.left = `${leftInt-1}px`;
           }
-          else {
-            dodger.style.left = `${leftInt}px`;
+        }
+      });
+      }
+      function moveDodgerRight() {
+        document.addEventListener("keydown", function(e) {
+        if (e.which === 39) {
+          var rightString = dodger.style.right.replace('px', '');
+          var rightInt = parseInt(rightString);
+
+          if (rightInt < 400) {
+            dodger.style.right = `${rightInt+1}px`;
           }
         }
       });
