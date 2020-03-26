@@ -17,6 +17,7 @@
         if (e.which === 37) {
           var leftString = dodger.style.left.replace('px', '');
           var leftInt = parseInt(leftString);
+
           if (leftInt > 0) {
             dodger.style.left = `${leftInt-10}px`;
           }
@@ -24,12 +25,8 @@
             dodger.style.left = `${leftInt}px`;
           }
         }
-      }
-
-
-
-        }
       });
+      }
     </script>
   </body>
 </html>
