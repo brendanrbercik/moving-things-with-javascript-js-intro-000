@@ -21,17 +21,25 @@
         }
       }
 
+      function moveDodgerRight() {
+        var rightString = dodger.style.right.replace('px', '');
+        var rightInt = parseInt(rightString);
+
+        if (rightInt < 400) {
+          dodger.style.right = `${rightInt+10}px`;
+        }
+      }
+
         document.addEventListener("keydown", function(e) {
         if (e.which === 37) {
             moveDodgerLeft();
           }
         });
 
-      // function moveDodgerRight() {
+      //
       //   document.addEventListener("keydown", function(e) {
       //   if (e.which === 39) {
-      //     var rightString = dodger.style.right.replace('px', '');
-      //     var rightInt = parseInt(rightString);
+      //
       //
       //     if (rightInt < 400) {
       //       dodger.style.right = `${rightInt+1}px`;
