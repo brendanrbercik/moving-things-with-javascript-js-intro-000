@@ -16,9 +16,10 @@
 
       document.addEventListener("keydown", function(e) {
         if (e.which === 37) {
-          var leftInt = dodger.style.left.replace('px', '');
-          var left = parseInt(leftInt);
-          dodger.style.left = `${left-10}px`;
+          var leftString = dodger.style.left.replace('px', '');
+          var leftInt = parseInt(leftString);
+          if (leftInt !== 0) {dodger.style.left = `${left-10}px`;}
+          else ()
         }
       });
     </script>
